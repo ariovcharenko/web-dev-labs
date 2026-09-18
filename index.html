@@ -1,22 +1,104 @@
-<!-- Arina Ovcharenko — Lab 3 -->
+<!-- Arina Ovcharenko — Lab 4 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My First Web Page</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Hello, Web! Welcome to My Site</h1>
-<p>This is my first HTML page for this course.</p>
 
-<h2>About This Page</h2>
-<ul>
-  <li>Learn modern front-end development</li>
-  <li>Build real-world web projects</li>
-  <li>Get comfortable with Git and GitHub workflows</li>
-</ul>
-<a href="https://developer.mozilla.org" target="_blank">MDN Web Docs — a reliable reference for HTML, CSS, and JavaScript</a>
-<img src="photo.jpeg" alt="A small brown bunny standing on the ground, looking at the camera">
+<header>
+  <h1>Hello, Web! Welcome to My Site</h1>
+  <p class="tagline">A student project for Web Development</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2>About This Page</h2>
+  <ul>
+    <li>Learn modern front-end development</li>
+    <li>Build real-world web projects</li>
+    <li>Get comfortable with Git and GitHub workflows</li>
+  </ul>
+  <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs — a reliable reference for HTML, CSS, and JavaScript</a>
+  <img src="photo.jpeg" alt="A small brown bunny standing on the ground, looking at the camera">
+
+  <h2>My Course Schedule</h2>
+  <table>
+    <caption>My Course Schedule — Web Development</caption>
+    <thead>
+      <tr>
+        <th scope="col">Week</th>
+        <th scope="col">Topic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Intro to HTML &amp; the Web</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Dev Tools &amp; HTTP</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>HTML, CSS &amp; Git</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Advanced HTML: Semantic Layout, Tables &amp; Forms</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>CSS: Box Model, Selectors &amp; Flexbox</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Contact Me</h2>
+  <form>
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-row">
+      <label for="msg">Message (optional)</label>
+      <textarea id="msg" name="msg"></textarea>
+    </div>
+
+    <div class="form-row">
+      <label for="referral">How did you find this page?</label>
+      <select id="referral" name="referral">
+        <option value="search">Search engine</option>
+        <option value="social">Social media</option>
+        <option value="friend">A friend</option>
+        <option value="class">Class / school</option>
+      </select>
+    </div>
+
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 Arina Ovcharenko</p>
+</footer>
+
 </body>
 </html>
