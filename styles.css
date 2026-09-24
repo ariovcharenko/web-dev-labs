@@ -1,10 +1,38 @@
+/* Arina Ovcharenko — Lab 5 */
+
+/* ===== Part 1 — The Box Model ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
+  box-sizing: border-box;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #2b2b2b;
-  max-width: 700px;
+  max-width: 800px;
   margin: 40px auto;
+  padding: 0 16px;
   background-color: #fafafa;
   line-height: 1.6;
+}
+
+header {
+  padding: 24px;
+  background-color: #0f9488;
+  color: white;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+header h1 {
+  color: white;
+  margin: 0 0 4px;
+}
+
+/* class selector */
+.tagline {
+  margin: 0;
+  opacity: 0.9;
 }
 
 h1 {
@@ -13,6 +41,7 @@ h1 {
 
 h2 {
   color: #0f9488;
+  margin-top: 32px;
 }
 
 a {
@@ -23,4 +52,110 @@ img {
   max-width: 100%;
   border-radius: 6px;
   margin-top: 10px;
+}
+
+/* ===== Part 2 & 3 — Selectors + Flexbox navigation ===== */
+#main-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  background-color: #0d3b36;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+/* the links live inside a <ul>, so the list is laid out as a row too */
+#main-nav ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+#main-nav a:hover {
+  background-color: #14b8a6;
+}
+
+/* ===== Part 4 — Table and Form ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+caption {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+thead {
+  background-color: #e6f7f4;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-row {
+  margin-bottom: 4px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0f9488;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d3b36;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  margin-top: 32px;
 }
