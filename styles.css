@@ -1,4 +1,4 @@
-/* Arina Ovcharenko - Lab 6 */
+/* Arina Ovcharenko - Lab 7 */
 
 * {
   box-sizing: border-box;
@@ -218,4 +218,18 @@ footer {
     width: 100%;
     text-align: center;
   }
+}
+
+body.dark {
+  background-color: #111827;
+  color: #f1f5f9;
+}
+
+body.dark table,
+body.dark form {
+  color: #2b2b2b;
+}
+
+body.dark footer {
+  color: #cbd5e1;
 }
