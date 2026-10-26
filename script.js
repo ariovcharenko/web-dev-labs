@@ -1,4 +1,4 @@
-// Arina Ovcharenko - Lab 8
+// Arina Ovcharenko - Lab 9
 
 // Lab 7 basics
 const name = "Ada";
@@ -81,4 +81,53 @@ if (themeBtn) {
   });
 } else {
   console.warn("theme-btn not found on this page");
+}
+
+// Parts 2 and 3: Promise and async/await
+function getGreetingAfterDelay() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("Hello from the future!");
+    }, 800);
+  });
+}
+
+// Part 2: consume the Promise with .then
+getGreetingAfterDelay().then(function(message) {
+  console.log(message);
+});
+
+// Part 3: same thing with async/await
+async function showGreeting() {
+  const message = await getGreetingAfterDelay();
+  console.log(message);
+}
+showGreeting();
+
+// Part 4: fetch a random fact with loading and error states
+const factBtn = document.querySelector("#fact-btn");
+const factDisplay = document.querySelector("#fact-display");
+
+async function loadFact() {
+  factDisplay.textContent = "Loading...";
+
+  try {
+    const response = await fetch("https://catfact.ninja/fact");
+
+    if (!response.ok) {
+      throw new Error("Server responded with an error");
+    }
+
+    const data = await response.json();
+    factDisplay.textContent = data.fact;
+  } catch (error) {
+    factDisplay.textContent = "Couldn't load a fact right now. Try again.";
+    console.error(error);
+  }
+}
+
+if (factBtn && factDisplay) {
+  factBtn.addEventListener("click", loadFact);
+} else {
+  console.warn("fact-btn or fact-display not found on this page");
 }
